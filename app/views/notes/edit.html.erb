@@ -1,11 +1,50 @@
+<%= form_with(model:@note, local: true) do |f| %>
 <div class="note-image">
+<div class="display">
   <div class="book2">
-    <div class= "note-box">
-      <div class= "fact-box">
-        
+    <div class= "note-box2">
+      <div class= "fact-box2">
+        <div class="boxs">
+          <p>fact</p>
+        </div>
+        <div class= "facts">
+          <%= f.text_field :fact, class:"text" %>
+        </div>
+      </div>
+      <div class= "memo-box">
+        <div class="boxs">
+          <p>memo</p>
+        </div>
+        <div class= "memo">
+          <%= f.text_area :memomemo, class:"text2" %>
+        </div>
       </div>
     </div>
-    <div class= "note-box">
+    <div class= "note-box2">
+      <div class= "new-box">
+        <div class="boxs">
+          <p>抽象</p>
+        </div>
+        <div class= "facts">
+          <%= f.text_area :tyusyo, class:"text2" %>
+        </div>
+      </div>
+      <div class= "new-box">
+        <div class="boxs">
+          <p>転用</p>
+        </div>
+        <div class= "memo">
+          <%= f.text_area :tennyou, class:"text2" %>
+        </div>
+      </div>
     </div>
+    </div>
+    </div>
+    <div class="sell-btn-contents">
+      <%= link_to '削除', note_path(@note.id), method: :delete, class:'btn' %>
+      <%= f.submit "SEVE" ,class:"sell-btn2" %>
+    </div>
+
   </div>
-</div>
+  
+  <% end %>

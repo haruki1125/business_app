@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2021_01_06_025837) do
 
   create_table "notes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "fact", null: false
-    t.text "memo"
+    t.text "memomemo"
     t.text "tyusyo"
     t.text "tennyou"
     t.bigint "user_id", null: false
