@@ -5,6 +5,8 @@
   width: 100vw;
 }
 
+
+
 .header {
   width: 100vw;
   height: 70px;
@@ -119,6 +121,8 @@
   margin: 10px auto;
   border: 2px solid #ababab;
   padding: 10px 0;
+  overflow: scroll;
+  
 }
 
 .card {
@@ -143,16 +147,114 @@
   background-size: 100%;
   height: 100vh;
   width: 100vw;
+}
+
+.display {
   display: flex;
   align-items: center;
+  width: 100%;
+  height: 90%;
 }
 
 .book2 {
   display: flex;
+  justify-content: center;
   width: 63vw;
   height: 72vh;
   margin:  auto;
   background-color: #6e4b0f;
   border-radius: 5px;
 
+}
+
+.note-box2 {
+  width: 30vw;
+  height: 70vh;
+  background-color: #ecebe4;
+  margin: auto 0;
+  border: 3px solid #ababab;
+  text-align: center;
+  display: flex;
+
+}
+
+.fact-box2 {
+  width: 30%;
+  height: 70vh;
+}
+
+.boxs {
+  width: 100%;
+  height: 10vh;
+  
+}
+
+.facts {
+  border-top: 1px solid #000000;
+  border-right: 1px solid #000000;
+  height: 60vh;
+  width: 100%;
+  
+}
+
+
+
+.boxs p{
+  margin: 0;
+  padding-top: 30px;
+}
+
+.memo-box {
+  width: 70%;
+  height: 70vh;
+}
+
+.memo {
+  border-top: 1px solid #000000;
+  height: 60vh;
+  width: 100%;
+}
+
+.new-box {
+  width: 50%;
+  height: 70vh;
+}
+
+.text {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.text2 {
+  width: 90%;
+  margin: 20px auto;
+  height: 90%;
+}
+
+.sell-btn-contents{
+  display: flex;
+  justify-content: center;
+  height: 5%;
+  width: 100vw;
+}
+
+.sell-btn2{
+  margin: 0 100px;
+  height: 30px;
+  background-color: #30374B;
+  color: #fff;
+}
+
+.btn {
+  margin: 0 100px;
+  height: 28px;
+  background-color: #313749;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  border:solid 2px;
+  border-color: #6F6F6F #212121 #212121 #6F6F6F;
+  line-height: 28px;
+  font-size: 14px;
 }
