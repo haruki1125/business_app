@@ -1,0 +1,46 @@
+<div class="notes-page">
+  <div class="header">
+    <p>Notest</p>
+    <div class= 'user'>
+          <% if user_signed_in? %>
+            <div class="nav__right">
+              <%= link_to current_user.nickname, "#", class: "nav__btn" %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__btn %>
+            </div>
+          <%# // ログインしているときは上記を表示するようにしましょう %>
+          <% else %>
+          <%# ログインしていないときは以下を表示するようにしましょう %>
+            <div class="nav__right">
+              <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
+              <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
+            </div>
+          <%# // ログインしていないときは上記を表示するようにしましょう %>
+          <% end %>
+          </div>
+  </div>
+  <div class="book">
+    <div class="note-box">
+      <p>memos</p>
+      <div class="card-box">
+        <% @notes.each do |note| %>
+          <div class ="card">
+            <%= link_to note.fact, edit_note_path(note.id), class: :cards %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="note-box-left">
+      <div class="fact-box">
+        <p>Fact</p>
+        <%= form_with(model:@note, local: true) do |f| %>
+          <%= f.text_field :fact, class:"items-text" %>
+          <%= f.text_field :memo, class:"item-text" %>
+          <%= f.text_field :tyusyo, class:"item-text" %>
+          <%= f.text_field :tennyou, class:"item-text" %>
+          <div class="sell-btn-contents">
+            <%= f.submit "SEND" ,class:"sell-btn" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+</div>
