@@ -22,8 +22,10 @@
     <div class="note-box">
       <p>memos</p>
       <div class="card-box">
+      <div id="list">
+      </div>
         <% @notes.each do |note| %>
-          <div class ="card">
+          <div class ="card" data-id=<%= note.id %>>
             <%= link_to note.fact, edit_note_path(note.id), class: :cards %>
           </div>
         <% end %>
@@ -32,13 +34,10 @@
     <div class="note-box-left">
       <div class="fact-box">
         <p>Fact</p>
-        <%= form_with(model:@note, local: true) do |f| %>
-          <%= f.text_field :fact, class:"items-text" %>
-          <%= f.text_field :memo, class:"item-text" %>
-          <%= f.text_field :tyusyo, class:"item-text" %>
-          <%= f.text_field :tennyou, class:"item-text" %>
-          <div class="sell-btn-contents">
-            <%= f.submit "SEND" ,class:"sell-btn" %>
+        <%= form_with(model:@note, id: "form", local: true) do |f| %>
+          <%= f.text_field :fact, id: "content", class:"items-text" %>
+          <div class="ontents">
+            <%= f.submit "SEND", id: "submit" ,class:"sell-btn" %>
           </div>
         <% end %>
       </div>
