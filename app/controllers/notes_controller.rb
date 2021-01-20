@@ -8,7 +8,7 @@ class NotesController < ApplicationController
   def create
     note = Note.new(note_params)
     if note.save
-      render json:{ note: note }
+      redirect_to notes_index_path
     else
       redirect_to notes_index_path
     end
@@ -32,10 +32,6 @@ class NotesController < ApplicationController
     redirect_to notes_index_path
   end
 
-  def checked
-    note = Note..where(user_id: current_user.id)
-    render json: { post: note }
-  end
 end
 
 
